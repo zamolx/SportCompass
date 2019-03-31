@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="text/css" href="img/cart2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/default.css">
+    <script src="js/images-broken.js"></script>
+    <title>Sell everything</title>
+</head>
+
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row" id="table-cart">
+                    <div class="col-sm-12 col-md-10 col-md-offset-1">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Qty</th>
+                                    <th class="text-center">Price</th>
+                                    <th class="text-center">Total</th>
+                                    <th> </th>
+                                </tr>
+                            </thead>
+                            <tbody id="show-cart">
+                            </tbody>
+                        </table>
+                        <div><button id="clear-cart">Clear Cart</button></div>
+                        <div class="container navbar-brand total-cart-div">
+                            <p>You have <strong class="cart-strong"><span id="count-cart">0</span></strong> items in your cart</p></br>
+                            <p>Total Cart: $<strong class="cart-strong"><span id="total-cart"></span></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container ">
+                <div id="cart-follow" class="navbar-toggler cart-img" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <strong><span class="count-cart-bar next-cart">0</span></strong>
+                    <img src="img/cart2.png" alt="cart">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">FullCart, your best shopping experience</h1>
+                <p class="lead text-muted">Shop everything you need, from clothes to furniture</p>
+            </div>
+        </section>
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" src="img/chair2.jpg" alt="Card image cap" onerror="brokenImage(this)">
+                            <div class="card-body">
+                                <p class="card-text">Chair</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="add-to-cart" data-name="Chair" data-price="40">Add to cart</button>
+                                    </div>
+                                    <h4 class="text-primary">1 piece $40</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" src="img/juice2.jpg" alt="Card image cap" onerror="brokenImage(this)">
+                            <div class="card-body">
+                                <p class="card-text">Juice</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="add-to-cart" data-name="Juice" data-price="6">Add to cart</button>
+                                    </div>
+                                    <h4 class="text-primary">1 piece $6</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" src="img/watch.jpg" alt="Card image cap"  onerror="brokenImage(this)">
+                            <div class="card-body">
+                                <p class="card-text">Watch</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="add-to-cart" data-name="Watch" data-price="100">Add to cart</button>
+                                    </div>
+                                    <h4 class="text-primary">1 piece $100</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" src="img/shoes.jpg" alt="Card image cap" onerror="brokenImage(this)">
+                            <div class="card-body">
+                                <p class="card-text">Shoes</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="add-to-cart" data-name="Shoes" data-price="80">Add to cart</button>
+                                    </div>
+                                    <h4 class="text-primary">1 pair $80</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" src="img/mario.jpg" alt="Card image cap"  onerror="brokenImage(this)">
+                            <div class="card-body">
+                                <p class="card-text">Skin Care - Mario Bradescu</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="add-to-cart" data-name="Skin Care" data-price="35">Add to cart</button>
+                                    </div>
+                                    <h4 class="text-primary">1 piece $35</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top" src="img/glasses.jpg" alt="Card image cap"  onerror="brokenImage(this)">
+                            <div class="card-body">
+                                <p class="card-text">Glasses</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="add-to-cart" data-name="Glasses" data-price="95">Add to cart</button>
+                                    </div>
+                                    <h4 class="text-primary">1 piece $95</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <strong>
+                <p class="text-center">Everybody can shop today!</p>
+            </strong>
+        </div>
+    </footer>
+</body>
+<script src="js/default.js"></script>
+</html>
